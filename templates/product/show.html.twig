@@ -1,0 +1,34 @@
+{# templates/product/show.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voir un produit</title>
+</head>
+<body>
+
+<h1>Détails du produit</h1>
+
+<table border="1">
+    <tr>
+        <th>Référence</th>
+        <td>{{ product.reference }}</td>
+    </tr>
+    <tr>
+        <th>Désignation</th>
+        <td>{{ product.designation }}</td>
+    </tr>
+    <tr>
+        <th>Quantité</th>
+        <td>{{ product.quantite }}</td>
+    </tr>
+    <tr>
+        <th>Prix</th>
+        <td>{{ product.prix }}</td>
+    </tr>
+</table>
+
+<a href="{{ path('app_products') }}">Retour à la liste des produits</a>
+
+</body>
+</html>

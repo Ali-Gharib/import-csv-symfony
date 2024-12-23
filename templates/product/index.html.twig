@@ -1,0 +1,38 @@
+{# templates/product/index.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des produits</title>
+</head>
+<body>
+
+<h1>Liste des produits</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Référence</th>
+            <th>Désignation</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.reference }}</td>
+                <td>{{ product.designation }}</td>
+                <td>{{ product.quantite }}</td>
+                <td>{{ product.prix }}</td>
+                <td>
+                    <a href="{{ path('app_product_show', {'id': product.id}) }}">Voir</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
